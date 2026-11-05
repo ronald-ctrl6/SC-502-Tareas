@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Bloque donde se coloca el código html -->
+
+<head>
+    <!-- Metadatos de la web: los css que queremos usar, y ligar aquellos scripts de javascript que queremos que la web utilice -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con varios navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- Diseño responsible en diferentes dispositivos -->
+    <title>Práctica 1 - Form</title> <!-- Título de la pestaña -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace de hoja de estilos externa CSS -->
+</head>
+
+<body> <!-- Aquí se define todo el contenido que quiero que el usuario vea desde la página web -->
+
+    <!-- ENCABEZADO -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="index.html">Inicio</a></li>
+                <li><a class="nav-link" href="index.html#habilidades">Habilidades</a></li>
+                <li><a class="nav-link" href="index.html#proyectos">Proyectos</a></li>
+                <li><a class="nav-link" href="index.html#experiencia">Experiencia</a></li>
+                <li><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="me-section">
+            <h1 class="me-title">RONALD<br>CALDERON</h1>
+            <p class="me-subtitle">INGENIERO CIVIL || INGENIERO EN SISTEMAS</p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+        <section class="form-card">
+            <h2 class="form-title">Reservación de Cita / Consultoría</h1>
+            <p class="form-subtitle">Completa el siguiente formulario para agendar una reunión o solicitar una cotización para un proyecto</p>
+
+            <form class="reservation-form" action="#">
+                <!-- Campo: Nombre -->
+                <div class="form-group">
+                    <label for="nombre">Nombre Completo:</label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Ingresa tu nombre completo" required>
+                </div>
+
+                <!-- Campo: Correo -->
+                <div class="form-group">
+                    <label for="correo">Correo:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <!-- Campo: Telefono -->
+                <div class="form-group">
+                    <label for="telefono">Teléfono:</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="8888-8888" required>
+                </div>
+
+                <!-- Campo: Fecha -->
+                <div class="form-group">
+                    <label for="fecha">Fecha de la Cita:</label>
+                    <input type="date" id="fecha" name="fecha" required>
+                </div>
+
+                <!-- Campo: Número de personas -->
+                <div class="form-group">
+                    <label for="personas">Número de Personas:</label>
+                    <input type="number" id="personas" name="personas" min="1" max="10" value="1" required>
+                </div>
+
+                <!-- Campo: Comentarios -->
+                <div class="form-group">
+                    <label for="comentarios">Comentarios o Detalles del Proyecto:</label>
+                    <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe aquí los detalles o el motivo de la reunión..."></textarea>
+                </div>
+
+                <!-- Botón de Envío -->
+                <div class="form-actions">
+                    <a href="index.html" class="btn btn-secondary">Volver al Inicio</a>
+                    <input type="submit" class="btn btn-primary" value="Enviar Consulta">
+                </div>
+            </form>
+
+        </section>
+    </main>
+
+    <!-- PIE DE PÁGINA-->
+    <footer class="main-footer">
+        <p>&copy; 2026 Portfolio. Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>

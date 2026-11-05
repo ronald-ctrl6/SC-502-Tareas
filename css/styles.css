@@ -1,0 +1,356 @@
+/* ==========================================================================
+   1. VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --font-sans: 'Josefin Sans', sans;
+    --font-cardo: 'Cardo', cardo;
+
+    /* Paleta de Colores */
+    --bg-main: #2A363B;
+    --bg-card: #242e35;
+    --bg-input: #1a2228;
+    --bg-respond: #5a6d5a;
+    --accent-green: #99B898;
+    --accent-yellow: #FECEA8;
+    --accent-hover: #ff847c;
+    --accent-red: #E84A5F;
+    --border-color: #4c6579;
+    --text-light: #ffffff;
+    --text-muted: #cccccc;
+
+}
+
+body {
+    /* Estructura base */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+    /* Estilo */
+    background-color: var(--bg-main);
+    font-family: var(--font-sans);
+    color: var(--text-light);
+    scroll-behavior: smooth;
+}
+
+* {
+    /* Modelo universal de cajas */
+    box-sizing: border-box;
+}
+
+main.main-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    padding: 2rem 1rem;
+    /*Nota 1rem = 16px*/
+}
+
+/* Tipografía base */
+p {
+    font-family: var(--font-cardo);
+    font-size: 1rem;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
+
+    color: var(--text-muted)
+}
+
+/* ==========================================================================
+   2. ENCABEZADO Y NAVEGACIÓN
+   ========================================================================== */
+.main-header {
+    padding: 1.5rem 1rem;
+    width: 100%;
+}
+
+.main-nav {
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    /* Espacio entre elementos de la lista */
+    list-style: none;
+    /* Quitar estilo de lista a los elementos */
+}
+
+.nav-link {
+    text-decoration: none;
+    /* Quitar estilo de link */
+    font-family: var(--font-cardo);
+    color: var(--text-light);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.me-section {
+    text-align: center;
+    padding: 2rem 1rem;
+}
+
+.me-title {
+    margin: 0;
+    font-size: clamp(2.5rem, 6vw, 5rem);
+    /* Tamaño del texto responsibo según el tamaño de la ventana: clamp(mínimo, preferido, máximo)*/
+    letter-spacing: 5px;
+    line-height: 1;
+}
+
+.me-subtitle {
+    font-size: clamp(1rem, 2vw, 1.5rem);
+    letter-spacing: 3px;
+    margin-top: 1rem;
+    color: var(--accent-green);
+}
+
+/* ==========================================================================
+   3. BOTONES REUTILIZABLES
+   ========================================================================== */
+.btn {
+    /* Dimensiones y espaciado */
+    display: inline-block;
+    /* Para que opcupe solo el ancho del texto + el padding */
+    padding: 1rem 1.5rem;
+
+    /* Estilo de texto */
+    text-decoration: none;
+    font-size: 1rem;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+
+    /* Estilo base */
+    border: none;
+
+    /* Interacción */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s ease;
+    /* Para transiciones suaves */
+}
+
+.btn:hover {
+    /* Efecto al pasar el cursor sobre el botón */
+    color: var(--text-light);
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    /* Efecto al presionar el botón */
+    background-color: var(--bg-input);
+    transform: translateY(0);
+}
+
+.btn-primary {
+    background-color: var(--accent-green);
+    color: var(--bg-input);
+    transform: scale(1.2);
+    margin: 0rem 1.5rem;
+}
+
+.btn-secondary {
+    background-color: var(--accent-hover);
+    color: var(--bg-input);
+    transform: scale(1.2);
+}
+
+.btn-terciary {
+    max-height: 3.5rem;
+    margin-right: 1rem;
+    background-color: var(--accent-yellow);
+    color: var(--bg-input);
+    transform: scale(1.2);
+
+     
+}
+
+/* ==========================================================================
+   4. TARJETAS Y SECCIONES (Index y Formulario)
+   ========================================================================== */
+.card-section,
+.form-card {
+    background-color: var(--bg-card);
+    border: 15px groove var(--bg-input);
+    padding: 5rem;
+    max-width: 1000px;
+    width: 100%;
+}
+
+.section-title,
+.form-title {
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.section-text,
+.form-subtitle {
+    text-align: flex-start;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilos de Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    border: 2px inset var(--border-color);
+    background-color: var(--bg-input);
+    color: var(--text-light);
+    font-family: var(--font-cardo);
+    font-size: 1rem;
+    letter-spacing: 0.7px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--accent-green);
+}
+
+.form-actions {
+    display: flex;
+    width: 100%;
+    /* Ajustar el contenido al ancho del form */
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.calculus-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos de espacios de respuesta */
+.respond-group {
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.respond-card {
+    background-color: var(--bg-main);
+    border: 5px groove var(--bg-input);
+    padding: 1rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.respond-textspace {
+    background-color: var(--bg-respond);
+    border-bottom: 3px solid var(--bg-input);
+    padding: 0.8rem;
+    width: 100%;
+
+    /* Ajustes visuales para el texto de dinero */
+    color: var(--text-light);
+    font-size: 1.1rem;
+    text-align: center;
+    white-space: pre-line;
+}
+
+.book-quote {
+    margin-top: 0.8rem;
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.book-quote-author {
+    display: block;
+    text-align: right;
+    margin-top: 0.8rem;
+    margin-bottom: 2rem;
+    font-style: normal;
+    font-size: 0.9rem;
+    color: var(--accent-yellow);
+    font-family: var(--font-sans);
+}
+
+/* ==========================================================================
+   5. PIE DE PÁGINA (Sticky Footer)
+   ========================================================================== */
+.main-footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    background-color: var(--bg-input);
+    border-top: 1px solid var(--border-color);
+    margin-top: auto;
+}
+
+.main-footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* ==========================================================================
+   6. RESPONSIVIDAD
+   ========================================================================== */
+@media (max-width: 800px) {
+    .nav-list {
+        gap: 1rem;
+    }
+
+    .card-section,
+    .form-card {
+        padding: 1.5rem;
+    }
+
+    .form-actions, .respond-group {
+        flex-direction: column;
+    }
+
+    .form-actions .btn {
+        width: 100%;
+    }
+}

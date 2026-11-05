@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Bloque donde se coloca el código html -->
+
+<head>
+    <!-- Metadatos de la web: los css que queremos usar, y ligar aquellos scripts de javascript que queremos que la web utilice -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con varios navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Diseño responsible en diferentes dispositivos -->
+    <title>Práctica 2 - HTML y Javascript</title> <!-- Título de la pestaña -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace de hoja de estilos externa CSS -->
+</head>
+
+<body> <!-- Aquí se define todo el contenido que quiero que el usuario vea desde la página web -->
+
+    <!-- ENCABEZADO -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="index.html">Inicio</a></li>
+                <li><a class="nav-link" href="index.html#habilidades">Habilidades</a></li>
+                <li><a class="nav-link" href="index.html#proyectos">Proyectos</a></li>
+                <li><a class="nav-link" href="index.html#experiencia">Experiencia</a></li>
+                <li><a class="nav-link" href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="me-section">
+            <h1 class="me-title">RONALD<br>CALDERON</h1>
+            <p class="me-subtitle">INGENIERO CIVIL || INGENIERO EN SISTEMAS</p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+
+        <!-- CARD DEL EJERCICIO 1 -->
+
+        <section class="form-card">
+            <h2 class="form-title">Ejercicio 1</h2>
+            <p class="form-subtitle">Cálculo de cargas sociales según la legislación de Costa Rica</p>
+
+            <section class="calculus-form" action="#">
+                <!-- Campo: Salario Bruto -->
+                <div class="form-group">
+                    <div>
+                        <label for="salarioBruto">Salario Bruto:</label>
+                        <input type="number" id="salarioBruto" name="salarioBruto"
+                            placeholder="Ingresa el salario bruto en colones" required>
+                    </div>
+                </div>
+                <!-- Botón de cálculo -->
+                <button class="btn btn-terciary" id="btnCalcularEjercicio1">Calcular</button>
+            </section>
+
+            <section class="respond-group">
+                <div class="respond-card">
+                    <h3>Cargas Sociales:</h3>
+                    <p class="respond-textspace" id="cargasSociales">...</p>
+                </div>
+                <div class="respond-card">
+                    <h3>Impuesto sobre la renta:</h3>
+                    <p class="respond-textspace" id="impuestoRenta">...</p>
+                </div>
+                <div class="respond-card">
+                    <h3>Salario Neto:</h3>
+                    <p class="respond-textspace" id="salarioNeto">...</p>
+                </div>
+            </section>
+
+        </section>
+
+        <!-- CARD DEL EJERCICIO 2 -->
+
+        <section class="form-card">
+            <h2 class="form-title">Ejercicio 2</h2>
+
+            <div class="form-group">
+                <span class="book-quote" id="textoCambiante">
+                    Descubre el texto precionando el botón!
+                </span>
+                <span class="book-quote-author" id="autorCambiante"></span>
+            </div>
+
+            <div class="card-actions">
+                <button class="btn btn-terciary" id="btnCambiarTexto">Cambiar Texto</button>
+            </div>
+
+        </section>
+
+        <!-- CARD DEL EJERCICIO 3 -->
+        <section class="form-card">
+            <h2 class="form-title">Ejercicio 3</h2>
+            <p class="form-subtitle">Verificación de edad</p>
+
+            <div class="calculus-form" action="#">
+                <div class="form-group">
+                    <label for="edadInput">Ingresa tu edad:</label>
+                    <input type="number" id="edadInput" placeholder="Ej. 20" min="0" max="120" required>
+                </div>
+                <button class="btn btn-terciary" id="btnVerificarEdad">Verificar</button>
+            </div>
+
+            <div class="respond-group">
+                <div class="respond-card">
+                    <h3>Resultado:</h3>
+                    <p class="respond-textspace" id="resultadoEdad">...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARD DEL EJERCICIO 4 -->
+        <section class="form-card">
+            <h2 class="form-title">Ejercicio 4</h2>
+            <p class="form-subtitle">Gestión de estudiantes y cálculo de promedio</p>
+
+            <div class="card-actions">
+                <button class="btn btn-terciary" id="btnCargarEstudiantes">Mostrar Estudiantes y Promedio</button>
+            </div>
+
+            <!-- Contenedor donde se listarán los estudiantes -->
+            <div class="respond-group">
+                <div class="respond-card">
+                    <h3>Lista de Estudiantes:</h3>
+                    <div id="contenedorEstudiantes" class="respond-textspace">
+                        Haz clic en el botón para cargar los datos...
+                    </div>
+                </div>
+
+                <div class="respond-card">
+                    <h3>Promedio General del Grupo:</h3>
+                    <p class="respond-textspace" id="promedioNotas">...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Enlace al archivo de JavaScript externo -->
+    <script src="js/functions.js"></script>
+
+    <!-- PIE DE PÁGINA-->
+    <footer class="main-footer">
+        <p>&copy; 2026 Portfolio. Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>
