@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Bloque donde se coloca el código html -->
+
+<head>
+    <!-- Metadatos de la web: los css que queremos usar, y ligar aquellos scripts de javascript que queremos que la web utilice -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Compatibilidad con varios navegador -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Diseño responsible en diferentes dispositivos -->
+    <title>Práctica 3 - PHP</title> <!-- Título de la pestaña -->
+    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace de hoja de estilos externa CSS -->
+</head>
+
+<body> <!-- Aquí se define todo el contenido que quiero que el usuario vea desde la página web -->
+
+    <!-- ENCABEZADO -->
+    <header class="main-header">
+        <nav class="main-nav">
+            <ul class="nav-list">
+                <li><a class="nav-link" href="index.html">Inicio</a></li>
+                <li><a class="nav-link" href="practica1.html">Practica 1</a></li>
+                <li><a class="nav-link" href="practica2.html">Practica 2</a></li>
+                <li><a class="nav-link" href="practica3.html">Practica 3</a></li>
+                <li><a class="nav-link" href="practicaClase/practicaClase6.php">Practica de Clase</a></li>
+            </ul>
+        </nav>
+
+        <div class="me-section">
+            <h1 class="me-title">TAREAS<br>INDIVIDUALES</h1>
+            <p class="me-subtitle">RONALD CALDERÓN || UNIVERSIDAD FIDÉLITAS</p>
+        </div>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="main-container">
+        
+        <section class="form-card">
+            <h2 class="form-title">Sistema de Transacciones</h2>
+            <p class="form-subtitle">Sistema en PHP que permite registrar transacciones realizadas con una tarjeta de
+                crédito y generar un estado de cuenta detallado</p>
+
+            <section class="calculus-form" action="#">
+                <!-- Campo: Salario Bruto -->
+                <div class="form-group">
+                    <div>
+                        <label for="salarioBruto">Salario Bruto:</label>
+                        <input type="number" id="salarioBruto" name="salarioBruto"
+                            placeholder="Ingresa el salario bruto en colones" required>
+                    </div>
+                </div>
+                <!-- Botón de cálculo -->
+                <button class="btn btn-terciary" id="btnCalcularEjercicio1">Calcular</button>
+            </section>
+
+            <section class="respond-group">
+                <div class="respond-card">
+                    <h3>Cargas Sociales:</h3>
+                    <p class="respond-textspace" id="cargasSociales">...</p>
+                </div>
+                <div class="respond-card">
+                    <h3>Impuesto sobre la renta:</h3>
+                    <p class="respond-textspace" id="impuestoRenta">...</p>
+                </div>
+                <div class="respond-card">
+                    <h3>Salario Neto:</h3>
+                    <p class="respond-textspace" id="salarioNeto">...</p>
+                </div>
+            </section>
+
+        </section>
+
+
+    </main>
+
+    <!-- Enlace al archivo de JavaScript externo -->
+    <script src="js/functions.js"></script>
+
+    <!-- PIE DE PÁGINA-->
+    <footer class="main-footer">
+        <p>&copy; 2026 Portfolio. Todos los derechos reservados</p>
+    </footer>
+
+</body>
+
+</html>

@@ -161,7 +161,7 @@ p {
     background-color: var(--accent-green);
     color: var(--bg-input);
     transform: scale(1.2);
-    margin: 0rem 1.5rem;
+    margin: auto;
 }
 
 .btn-secondary {
@@ -176,8 +176,6 @@ p {
     background-color: var(--accent-yellow);
     color: var(--bg-input);
     transform: scale(1.2);
-
-     
 }
 
 /* ==========================================================================
@@ -211,6 +209,12 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.section-button {
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
 /* Estilos de Formulario */
@@ -352,5 +356,6 @@ form {
 
     .form-actions .btn {
         width: 100%;
+        margin: auto;
     }
 }
