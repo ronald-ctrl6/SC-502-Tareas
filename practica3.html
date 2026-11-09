@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Diseño responsible en diferentes dispositivos -->
     <title>Práctica 3 - PHP</title> <!-- Título de la pestaña -->
-    <link rel="stylesheet" href="css/styles.css"> <!-- Enlace de hoja de estilos externa CSS -->
+    <link rel="stylesheet" href="css/styles.css?v=2"> <!-- Enlace de hoja de estilos externa CSS -->
 </head>
 
 <body> <!-- Aquí se define todo el contenido que quiero que el usuario vea desde la página web -->
@@ -21,7 +21,7 @@
                 <li><a class="nav-link" href="practica1.html">Practica 1</a></li>
                 <li><a class="nav-link" href="practica2.html">Practica 2</a></li>
                 <li><a class="nav-link" href="practica3.html">Practica 3</a></li>
-                <li><a class="nav-link" href="practicaClase/practicaClase6.php">Practica de Clase</a></li>
+                <li><a class="nav-link" href="php/practicaClase6.php">Practica de Clase</a></li>
             </ul>
         </nav>
 
@@ -33,47 +33,54 @@
 
     <!-- CONTENIDO PRINCIPAL -->
     <main class="main-container">
-        
         <section class="form-card">
             <h2 class="form-title">Sistema de Transacciones</h2>
             <p class="form-subtitle">Sistema en PHP que permite registrar transacciones realizadas con una tarjeta de
                 crédito y generar un estado de cuenta detallado</p>
 
-            <section class="calculus-form" action="#">
-                <!-- Campo: Salario Bruto -->
+            <!-- FORMULARIO DE REGISTRO -->
+            <form class="transaccion-form" id="formTransaccion">
                 <div class="form-group">
-                    <div>
-                        <label for="salarioBruto">Salario Bruto:</label>
-                        <input type="number" id="salarioBruto" name="salarioBruto"
-                            placeholder="Ingresa el salario bruto en colones" required>
-                    </div>
+                    <label for="descripcion">Descripción de la transacción:</label>
+                    <input type="text" id="descripcion" name="descripcion" maxlength="70"
+                        placeholder="Ej: Supermercado" required>
                 </div>
-                <!-- Botón de cálculo -->
-                <button class="btn btn-terciary" id="btnCalcularEjercicio1">Calcular</button>
-            </section>
+                <div class="form-group">
+                    <label for="monto">Monto de la transacción:</label>
+                    <input type="number" id="monto" name="monto" min="0.01" step="0.01"
+                        placeholder="Ej: 45000" required>
+                </div>
+                <div class="form-actions">
+                    <button class="btn btn-secondary" type="submit">Registrar</button>
+                    <button class="btn btn-terciary" type="button" id="btnGenerar">Generar estado de cuenta</button>
+                    <button class="btn btn-primary" type="button" id="btnLimpiar">Limpiar</button>
+                </div>
+            </form>
 
+            <!-- Seccion 1: ESTADO DE LA EJECUCIÓN Y TRANSACCIONES -->
             <section class="respond-group">
                 <div class="respond-card">
-                    <h3>Cargas Sociales:</h3>
-                    <p class="respond-textspace" id="cargasSociales">...</p>
+                    <h3>Estado de la ejecución:</h3>
+                    <p class="respond-textspace" id="estadoEjecucion">...</p>
                 </div>
                 <div class="respond-card">
-                    <h3>Impuesto sobre la renta:</h3>
-                    <p class="respond-textspace" id="impuestoRenta">...</p>
-                </div>
-                <div class="respond-card">
-                    <h3>Salario Neto:</h3>
-                    <p class="respond-textspace" id="salarioNeto">...</p>
+                    <h3>Transacciones registradas:</h3>
+                    <pre class="respond-textspace" id="listaTransacciones">Aún no hay transacciones.</pre>
                 </div>
             </section>
 
+            <!-- Seccion 2: ESTADO DE CUENTA -->
+            <section class="respond-group respond-group-cuenta">
+                <div class="respond-card">
+                    <h3>Estado de cuenta:</h3>
+                    <pre class="respond-textspace respond-textspace-reporte" id="estadoCuenta">...</pre>
+                </div>
+            </section>
         </section>
-
-
     </main>
 
     <!-- Enlace al archivo de JavaScript externo -->
-    <script src="js/functions.js"></script>
+    <script src="js/functions.js?v=2"></script>
 
     <!-- PIE DE PÁGINA-->
     <footer class="main-footer">

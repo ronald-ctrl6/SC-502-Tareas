@@ -359,3 +359,42 @@ form {
         margin: auto;
     }
 }
+
+
+/* ==========================================================================
+   7. PRÁCTICA 3 (Sistema de transacciones)
+   ========================================================================== */
+/* Botones del formulario*/
+.transaccion-form .form-actions .btn {
+    flex: 1;
+    margin: 0;
+    max-height: none;
+    transform: none;
+}
+
+.transaccion-form .form-actions .btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Segunda fila de respuestas*/
+.respond-group-cuenta {
+    margin-top: 1rem;
+}
+
+.respond-group-cuenta .respond-card {
+    min-width: 0;
+}
+
+/* Estado de cuenta*/
+.respond-textspace-reporte {
+    white-space: pre;
+    text-align: left;
+    font-size: 0.8rem;
+    overflow-x: auto;
+}
+
+@media (max-width: 800px) {
+    .transaccion-form .form-actions .btn {
+        flex: none;
+    }
+}
