@@ -13,9 +13,9 @@ Repositorio con las tareas individuales del curso **SC-502 Programación Web** (
 ```
 SC-502-Tareas/
 ├── css/                      # Práctica Programada 1 - HTML y CSS
-├── js/                       # Práctica Programada 2 - JavaScript
+├── js/                       # Práctica Programada 2 y 3 - JavaScript
 ├── php/                      # Práctica Programada 3 - PHP
-├── practicaClase/            # Ejercicio hecho en clase
+├── reportes/                 # Práctica Programada 3 - Ubicacion del archivo txt
 ├── index.html                # Práctica Programada 1 - HTML y CSS
 ├── practica1.html            # Práctica Programada 1 - HTML y CSS
 ├── practica2.html            # Práctica Programada 2 - JavaScript
@@ -72,3 +72,8 @@ Total con interés  = Total de contado × 1.026
 Cash back          = Total de contado × 0.001
 Monto final a pagar = Total con interés − Cash back
 ```
+
+### Como ejecutar
+
+Guardar el proyecto en la carpeta de htdocs de xampp. Al iniciar el servidor de Apache, ir a la siguiente ruta:
+http://localhost/SC-502-Tareas/
